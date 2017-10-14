@@ -16,7 +16,7 @@ export default class Login extends Component {
         this.state = {
             movies: this.ds.cloneWithRows(['row 1', 'row 2']),
         };
-        
+
     }
 
     onChange(data) {
@@ -43,7 +43,7 @@ export default class Login extends Component {
 
                 <View style={style.logoContainer}>
                     <Image style={style.logo} source={require('../../images/app-icon.png')} />
-                    <Text style={style.title}> A app build for VNPT using React Native </Text>
+                    <Text style={style.title}> My App </Text>
                 </View>
                 <View style={style.formContainter}>
                     <LoginForm onChange={this.onChange.bind(this)} />
