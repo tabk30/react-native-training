@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { View, StyleSheet, TextInput, TouchableOpacity, Text, KeyboardAvoidingView } from 'react-native';
+import { View, StyleSheet, TextInput, TouchableOpacity, Text, KeyboardAvoidingView, Button } from 'react-native';
 
 export default class LoginForm extends Component {
     constructor(props) {
@@ -34,7 +34,11 @@ export default class LoginForm extends Component {
 
     onLogin() {
         console.log("[LoginForm:onLogin]", this.state);
-        this.getMoviesFromApiAsync();
+        // this.getMoviesFromApiAsync();
+    }
+
+    onPressLearnMore(){
+        console.log("[LoginForm:onPressLearnMore]", this.state);
     }
 
     render() {
@@ -59,9 +63,17 @@ export default class LoginForm extends Component {
                 >
                     <Text style={style.buttonText}> LOGIN </Text>
                 </TouchableOpacity>
+
+                <Button
+                onPress={this.onPressLearnMore}
+                title="Learn More"
+                accessibilityLabel="Learn more about this purple button"
+                />
             </View>
         );
     }
+
+    
 
 
 }

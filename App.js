@@ -42,7 +42,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <TextInputDemo />
+      <Login />
       // <View style={styles.wrapper}>
       //   <View style={styles.rowFeild}>
       //     <View style={styles.rowFeildCell}>
