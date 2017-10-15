@@ -17,6 +17,8 @@ import Splash from './Splash';
 import Login from './src/components/Login/Login';
 import TextDemo from './src/components/Text/TextDemo';
 import TextInputDemo from './src/components/TextIput/TextInputDemo';
+import ButtonDemo from './src/components/Button/Button';
+import FunctionDemo  from './src/components/Function/FunctionDemo'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -29,66 +31,13 @@ export default class App extends Component {
   data = "Parent data";
   constructor(props) {
     super(props);
-    console.ignoredYellowBox = ['Remote debugger'];
   }
 
-  appCallback() {
-    console.log("[App:appCallback]");
-  }
 
-  callbackFromChild(data) {
-    console.log("[App:callbackFromChild]", data);
-  }
 
   render() {
     return (
-      <Login />
-      // <View style={styles.wrapper}>
-      //   <View style={styles.rowFeild}>
-      //     <View style={styles.rowFeildCell}>
-      //       <Text style={styles.text} > 1  </Text>
-      //     </View>
-      //     <View style={styles.rowFeildCell}>
-      //       <Text style={styles.text} > 2  </Text>
-      //     </View>
-      //     <View style={styles.rowFeildCell}>
-      //       <Text style={styles.text} > 3  </Text>
-      //     </View>
-      //   </View>
-      //   <View style={styles.rowFeild}>
-      //     <View style={styles.rowFeildCell}>
-      //       <Text style={styles.text} > 4  </Text>
-      //     </View>
-      //     <View style={styles.rowFeildCell}>
-      //       <Text style={styles.text} > 5  </Text>
-      //     </View>
-      //     <View style={styles.rowFeildCell}>
-      //       <Text style={styles.text} > 6  </Text>
-      //     </View>
-      //   </View>
-      //   <View style={styles.rowFeild}>
-      //   <View style={styles.rowFeildCell}>
-      //       <Text style={styles.text} > 7  </Text>
-      //     </View>
-      //     <View style={styles.rowFeildCell}>
-      //       <Text style={styles.text} > 8  </Text>
-      //     </View>
-      //     <View style={styles.rowFeildCell}>
-      //       <Text style={styles.text} > 9  </Text>
-      //     </View>
-      //   </View>
-      //   <View style={styles.rowFeild}>
-      //     <View style={styles.rowFeildCell}>
-      //       <Text style={styles.text} > *  </Text>
-      //     </View>
-      //     <View style={styles.rowFeildCell}>
-      //       <Text style={styles.text} > 0  </Text>
-      //     </View>
-      //     <View style={styles.rowFeildCell}> 
-      //       <Text style={styles.text} > #  </Text>
-      //     </View>
-      //   </View>
-      // </View>
+      <FunctionDemo />
     );
   }
 }
@@ -142,59 +91,6 @@ export class FistComponent extends Component {
   }
 }
 
-// export class FistComponent extends Component {
-//   constructor(props) {
-//     super(props);
-//     console.log("[FistComponent:constructor]", props.inputData);
-//   }
-
-
-//   componentWillMount() {
-//     console.log("[FistComponent:componetWillMount]");
-//   }
-//   render() {
-//     console.log("[FistComponent:render]");
-//     return (
-//       <View>
-//         <Text> Toi ten la pham tuan anh</Text>
-//         <TouchableOpacity
-//           style={styles.buttonContainer}
-//           onPress={this.onChange.bind(this)}
-//         >
-//           <Text style={styles.buttonText}> ONCHANGE </Text>
-//         </TouchableOpacity>
-//       </View>
-//     );
-//   }
-
-//   onChange() {
-//     console.log("[FistComponent:onChange]");
-//     this.setState({ newdata: "new data" });
-//     this.props.callbackToParent();
-//   }
-
-//   componentDidMount() {
-//     console.log("[FistComponent:componetDidMount]");
-//   }
-
-//   shouldComponentUpdate() {
-//     console.log("[FistComponent:shouldComponentUpdate]");
-//     return true;
-//   }
-
-//   componentWillReceiveProps(nextProps) {
-//     console.log("[FistComponent:componentWillReceiveProps]");
-//   }
-
-//   componentWillUpdate() {
-//     console.log("[FistComponent:componentWillUpdate]");
-//   }
-
-//   componentDidUpdate() {
-//     console.log("[FistComponent:componentDidUpdate]");
-//   }
-
-// }
 
 const styles = StyleSheet.create({
   container: {
