@@ -2,30 +2,26 @@ import React from 'react';
 import { View, ListView, StyleSheet, Text, Image, TextInput, TouchableOpacity } from 'react-native';
 
 // import dataNew from './demoData';
-
+const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
 export default class ListViewFooter extends React.Component {
+    listData = dataNew;
+    
     constructor(props) {
         super(props);
-        const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
         this.state = {
-            dataSource: ds.cloneWithRows(dataNew),
+            dataSource: ds.cloneWithRows(this.listData),
         };
     }
 
     loadMoreData() {
-        console.log("[ListViewFooter:loadMoreData] currentData", currentData);
-        var currentData = dataNew;
         for (i = 0; i < addData.length; i++) {
             console.log("[ListViewFooter:loadMoreData]", addData[i]);
-            currentData.push(dataNew[i]);
+            this.listData.push(dataNew[i]);
         }
-        console.log("[ListViewFooter:loadMoreData] currentData su add", currentData);
-        const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
         this.setState({
-            dataSource: ds.cloneWithRows(currentData),
+            dataSource: ds.cloneWithRows(this.listData),
         });
     }
-
 
     render() {
         return (

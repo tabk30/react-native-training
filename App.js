@@ -23,6 +23,7 @@ import ListViewBasic from './src/components/ListView/ListViewBasic';
 import ListViewImage from './src/components/ListView/ListViewImage';
 import ListViewHeader from './src/components/ListView/ListViewHeader';
 import ListViewFooter from './src/components/ListView/ListViewFooter';
+import ScrollViewDemo from './src/components/ScrollView/ScrollViewDemo';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -36,12 +37,9 @@ export default class App extends Component {
   constructor(props) {
     super(props);
   }
-
-
-
   render() {
     return (
-      <ListViewFooter />
+      <ScrollViewDemo />
     );
   }
 }
