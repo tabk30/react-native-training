@@ -21,6 +21,8 @@ import ButtonDemo from './src/components/Button/Button';
 import FunctionDemo  from './src/components/Function/FunctionDemo';
 import ListViewBasic from './src/components/ListView/ListViewBasic';
 import ListViewImage from './src/components/ListView/ListViewImage';
+import ListViewHeader from './src/components/ListView/ListViewHeader';
+import ListViewFooter from './src/components/ListView/ListViewFooter';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -39,7 +41,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <ListViewImage />
+      <ListViewFooter />
     );
   }
 }

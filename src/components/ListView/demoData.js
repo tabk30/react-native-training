@@ -1,4 +1,4 @@
-export default data = [
+export const data = [
     {
       "gender": "male",
       "name": {
@@ -1111,3 +1111,4 @@ export default data = [
     }
   ];
   
+
