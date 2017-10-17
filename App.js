@@ -24,6 +24,8 @@ import ListViewImage from './src/components/ListView/ListViewImage';
 import ListViewHeader from './src/components/ListView/ListViewHeader';
 import ListViewFooter from './src/components/ListView/ListViewFooter';
 import ScrollViewDemo from './src/components/ScrollView/ScrollViewDemo';
+// import ImageDemo from  './src/components/Image/ImageDemo';
+import CameraCaptureDemo from  './src/components/CameraCapture/CameraCaptureDemo';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -39,7 +41,7 @@ export default class App extends Component {
   }
   render() {
     return (
-      <ScrollViewDemo />
+      <CameraCaptureDemo />
     );
   }
 }
