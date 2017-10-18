@@ -6,94 +6,24 @@
 
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
-  Text,
   View,
-  TouchableOpacity
 } from 'react-native';
 
-import Splash from './Splash';
-import Login from './src/components/Login/Login';
-import TextDemo from './src/components/Text/TextDemo';
-import TextInputDemo from './src/components/TextIput/TextInputDemo';
-import ButtonDemo from './src/components/Button/Button';
-import FunctionDemo  from './src/components/Function/FunctionDemo';
-import ListViewBasic from './src/components/ListView/ListViewBasic';
-import ListViewImage from './src/components/ListView/ListViewImage';
-import ListViewHeader from './src/components/ListView/ListViewHeader';
-import ListViewFooter from './src/components/ListView/ListViewFooter';
-import ScrollViewDemo from './src/components/ScrollView/ScrollViewDemo';
-// import ImageDemo from  './src/components/Image/ImageDemo';
-import CameraCaptureDemo from  './src/components/CameraCapture/CameraCaptureDemo';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-  'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-  'Shake or press menu button for dev menu',
-});
+import {StackNVDemo} from "./src/components/Navigation/StackNavigationDemo";
 
 export default class App extends Component {
-  data = "Parent data";
   constructor(props) {
     super(props);
   }
+
   render() {
     return (
-      <CameraCaptureDemo />
+      <StackNVDemo />
     );
   }
 }
 
-export class FistComponent extends Component {
-  constructor(props) {
-    super(props);
-    console.log("[FistComponent:constructor]", this.props.firsData);
-  }
-
-  componentWillMount() {
-    console.log("[FistComponent:componentWillMount]");
-  }
-
-  onChange() {
-    console.log("[FistComponent:onChange]");
-    this.setState({ newdata: "new data" });
-    this.props.callbackChild("Child data");
-  }
-
-  shouldComponentUpdate() {
-    console.log("[FistComponent:shouldComponentUpdate]");
-    return true;
-  }
-
-  componentWillUpdate() {
-    console.log("[FistComponent:componentWillUpdate]");
-  }
-
-  render() {
-    console.log("[FistComponent:render]");
-    return (
-      <View>
-        <Text> Đây là component đầu tiên  </Text>
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={this.onChange.bind(this)}
-        >
-          <Text style={styles.buttonText}> ONCHANGE </Text>
-        </TouchableOpacity>
-      </View>
-    );
-  }
-
-  componentDidMount() {
-    console.log("[FistComponent:componentDidMount]");
-  }
-
-  componentDidUpdate() {
-    console.log("[FistComponent:componentDidUpdate]");
-  }
-}
 
 
 const styles = StyleSheet.create({
@@ -102,52 +32,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-  buttonContainer: {
-    backgroundColor: "#34495e",
-    paddingVertical: 15,
-    paddingHorizontal: 10
-  },
-  buttonText: {
-    textAlign: "center",
-    color: "#FFF"
-  },
-  textTitle: {
-    backgroundColor: "red",
-
-    borderColor: "black",
-    borderWidth: 2,
-    flex: 1
-  },
-
-  wrapper: {
-    backgroundColor: "white",
-    flex: 1,
-    flexDirection: "column"
-  },
-  rowFeild: {
-    flex: 1,
-    flexDirection: "row",
-  },
-  rowFeildCell: {
-    flex: 1,
-    backgroundColor: "green",
-    borderWidth: 2,
-    borderColor: "gray",
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  text: {
-    fontSize: 20
+    marginTop: 20
   }
 });
