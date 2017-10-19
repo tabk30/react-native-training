@@ -2,6 +2,6 @@
 
 
 import { AppRegistry } from 'react-native';
-import {StackNVDemo} from "./src/components/Navigation/StackNavigationDemo";
+import  App  from "./App";
 
-AppRegistry.registerComponent('MyApp', () => StackNVDemo);
+AppRegistry.registerComponent('MyApp', () => App);
